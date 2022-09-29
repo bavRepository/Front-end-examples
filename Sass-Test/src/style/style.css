@@ -1,0 +1,41 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+}
+
+.parent {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 100%;
+}
+.parent:before {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background-color: #DC143C;
+}
+.parent:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100px;
+  background-color: #DC143C;
+}
+.parent:hover:after, .parent:hover:before {
+  background-color: #191970;
+}

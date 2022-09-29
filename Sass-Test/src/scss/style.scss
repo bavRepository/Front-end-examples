@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+}
+
+.parent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgba($color: #000000, $alpha: 0.85);
+    border-radius: 100%;
+    
+    &:before {
+        content: '';
+        width: 100px;
+        height: 4px;
+        background-color:#DC143C;
+    }
+    
+    &:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100px;
+        background-color:#DC143C;
+    }
+    &:hover {
+        &:after,&:before { 
+        background-color:#191970;
+        }
+    }
+
+}
