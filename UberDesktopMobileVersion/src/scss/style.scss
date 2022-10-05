@@ -3,6 +3,45 @@
     box-sizing: border-box;
 }
 
+@mixin black-label-container {
+    margin: 0 auto;
+    display: flex;
+    @include black-label-formating;
+}
+
+@mixin black-label-formating {
+    width: 115px;
+    height: 27px;
+    background: #000000;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+@mixin black-title {
+    margin-top: 33px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+@mixin sub-title {
+    margin: 0 auto;    
+    font-weight: 400;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222222;
+}
+
+
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -65,19 +104,31 @@ header {
         &_content {
             display: flex;
             justify-content: space-between;
-            padding: 19px 96px;
+            padding: 21px 96px;
   
             &_logo_block {
                 display: flex;
+                flex-direction: column;
                 flex: 1 1 60%;
-                font-weight: 100;
-                font-size: 13px;
-                color: #FFFFFF;
                 padding-right: 20px;
 
-                &_wrapper img {
-                    display: block;
+                &_official {
+                    font-weight: 100;
+                    font-size: 13px;
+                    opacity: 0.5;
+                    color: #FFFFFF;
                 }
+
+                &_wrapper {
+                width: 285px;
+                height: 32px;
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+
+            }
             }
 
             &_call_us_block {
@@ -162,7 +213,7 @@ header {
         color: #FFFFFF;
         margin-top: 26px;
 
-        &_flex_item {
+        &_text_wrapper {
             flex: 0 1 84%;
         }
     }
@@ -192,29 +243,14 @@ header {
     padding: 18px 0px 64px 0;
     display: flex;
 
-    &_label {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 115px;
-        height: 27px;
-        background: #000000;
-        font-weight: 400;
-        font-size: 11px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
-    &_title {
-        margin-top: 33px;
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 48px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #222222;
+        &_label {
+            @include black-label-container;
         }
+
+        &_title {
+           @include black-title;
+        }
+
     &_items_wrapper {
         display: flex;
         align-items:top;
@@ -256,6 +292,96 @@ header {
                     font-size: 15px;
                     line-height: 21px;
                     color: #000000;
+                }
+            }
+        }
+    }
+}
+
+.mobile_app {
+    background: url('../assets/img/bg/mobile_bg.png') center center/cover no-repeat;
+    display: flex;
+    min-height: 864px;
+    padding: 46px 0 80px 0;
+
+    &_label {
+        @include black-label-container;
+    }
+
+    &_title {
+        @include black-title;
+    }
+
+    &_sub_title {
+        @include sub-title;
+    }
+
+    &_items_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .mobile_item {
+            margin-top: 30px;
+            width: 320px;
+            height: 280px;
+            flex: 0 1 auto;
+            position: relative;
+            
+            &_1 {
+                background: url('../assets/img/mobile_karts/1_one_touch.png') center center/cover no-repeat;
+            }
+            &_2 {
+                background: url('../assets/img/mobile_karts/2_good_serve.png') center center/cover no-repeat;
+            }
+            &_3 {
+                background: url('../assets/img/mobile_karts/3_clear_price.png') center center/cover no-repeat;
+            }
+            &_4 {
+                background: url('../assets/img/mobile_karts/4_сashless_payment.png') center center/cover no-repeat;
+            }
+            &_5 {
+                background: url('../assets/img/mobile_karts/5_callback.png') center center/cover no-repeat;
+            }
+            &_6 {
+                background: url('../assets/img/mobile_karts/6_divide_drive_payment.png') center center/cover no-repeat;
+            }
+
+            &_title {
+                margin-top: 82.5px;
+                font-size: 24px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+
+            &_plus {
+                width: 29px;
+                height: 29px;
+                background:#000000;
+                border-radius:100%;
+                position: absolute;
+                bottom: 34px;
+                left:50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+
+                &:before {
+                    content: '';
+                    width: 14px;
+                    height: 2px;
+                    background: #1EACC7;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 14px;
+                    background: #1EACC7;
                 }
             }
         }
