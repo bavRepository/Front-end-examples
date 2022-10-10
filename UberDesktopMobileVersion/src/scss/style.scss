@@ -3,13 +3,12 @@
     box-sizing: border-box;
 }
 
-@mixin black-label-container {
+$light-blue : #1CA8C3;
+$soft-dark: #222222;
+
+@mixin black-bg-label {
     margin: 0 auto;
     display: flex;
-    @include black-label-formating;
-}
-
-@mixin black-label-formating {
     width: 115px;
     height: 27px;
     background: #000000;
@@ -18,27 +17,24 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: #FFFFFF; 
 }
 
-@mixin black-title {
+@mixin white-bg-title {
+    text-align: center;
     margin-top: 33px;
     font-weight: 700;
     font-size: 38px;
     line-height: 48px;
-    text-align: center;
     text-transform: uppercase;
-    color: #222222;
+    color: $soft-dark;
 }
 
-@mixin sub-title {
-    margin: 0 auto;    
+@mixin white-sub-title {
+    text-align: center;
     font-weight: 400;
     font-size: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #222222;
+    color: $soft-dark;
 }
 
 
@@ -62,27 +58,25 @@ header {
 
         .header_nav_menu {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
-            padding: 0 70px;
             margin: 0;
+            padding: 0;
             list-style-type: none;
 
             &_item {
                 text-align: center;
-                // padding-right: 30px;
+                flex-wrap: 0;
                 min-height: 30px;
                 display: flex;
                 align-items: center;
                 border-right: 2px dotted #000000;
-                padding:0 30px;
-                &:first-child {
-                    padding-left: 0;
-                }
+                padding:10px 30px;
+
                 &:last-child {
-                    padding-right: 0;
                     border-right: none;
-                }
+                 }
             }
                 &_item_link {
                     font-weight: 300;
@@ -103,13 +97,14 @@ header {
 
         &_content {
             display: flex;
-            justify-content: space-between;
-            padding: 21px 96px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 21px;
   
             &_logo_block {
                 display: flex;
                 flex-direction: column;
-                flex: 1 1 60%;
+                flex: 0 1 50%;
                 padding-right: 20px;
 
                 &_official {
@@ -132,7 +127,7 @@ header {
             }
 
             &_call_us_block {
-                flex: 1 1 20%;
+                flex: 0 1 15%;
                 padding-right: 26px;
 
                 &_title {
@@ -156,7 +151,7 @@ header {
             }
 
             &_make_call_wrapper {
-                flex: 1 1 20%;
+                flex: 0 1 15%;
 
                 &_btn {
                     font-weight: 400;
@@ -243,12 +238,13 @@ header {
     padding: 18px 0px 64px 0;
     display: flex;
 
+
         &_label {
-            @include black-label-container;
+            @include black-bg-label;
         }
 
         &_title {
-           @include black-title;
+           @include white-bg-title;
         }
 
     &_items_wrapper {
@@ -305,15 +301,15 @@ header {
     padding: 46px 0 80px 0;
 
     &_label {
-        @include black-label-container;
+        @include black-bg-label;
     }
 
     &_title {
-        @include black-title;
+        @include white-bg-title;
     }
 
     &_sub_title {
-        @include sub-title;
+        @include white-sub-title;
     }
 
     &_items_wrapper {
@@ -387,3 +383,196 @@ header {
         }
     }
 }
+
+.choose {
+    min-height: 898px;
+    display: flex;
+    
+    &_top_side_container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        position: relative;
+        min-height: 502px;
+        background: #070716;
+        padding-top: 59px;
+
+        .choose_label {
+            @include black-bg-label;
+            background:white;
+            color: #070716;
+        }
+
+        .choose_title {
+            @include white-bg-title;
+            color: #FFFFFF;
+            background: #070716;
+        }
+
+        .choose_sub_title {
+            @include white-sub-title;
+            color: #FFFFFF;
+        }
+
+        .car_bg {
+            position: absolute;
+            top:234px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+    &_bot_side_container {
+        padding-top: 210.5px;
+        min-height: 397px;
+        background:url('../assets/img/bg/uber_car_bot_bg.png') center center/cover no-repeat;
+
+        .choose_car_descr {
+            margin: 0 auto;
+            width: 327px;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 24px;
+            text-align: center;
+            color: $soft-dark;
+        }
+    }
+}
+
+.condition_require {
+    display: flex;
+    min-height: 917px;
+    padding: 66px 0 87px 0;
+
+    &_label {
+        @include black-bg-label;
+    }
+
+    &_title {
+        @include white-bg-title;
+        margin-top: 27px;
+    }
+
+    .cond_req_items_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .item_wrapper {
+            flex: 0 1 46.5%;
+        }
+
+        .item {
+            margin: 33px 0;
+  
+            &_list {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                margin-top: 18px;
+                padding-left: 50px;
+  
+                .li_content {
+                    position: relative;
+                    margin-bottom: 10px;
+                    font-weight: 300;
+                    font-size: 17px;
+                    color: $soft-dark;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left:-32px;
+                        top:50%;
+                        transform: translateY(-50%);
+                        width: 21px;
+                        height: 20px;
+                        background:url('../assets/img/check_blue.png') center center/cover no-repeat;
+                    }
+
+                    &_bot:before {
+                        background:url('../assets/img/check_red.png') center center/cover no-repeat;
+                    }
+                }
+            }
+            .day_salary {
+                margin-top: 25px;
+                color: $light-blue;
+            }
+
+            &_bot {
+                margin-bottom: 0;
+            }
+
+            &_title {
+                font-weight: 400;
+                font-size: 22px;
+                align-items: center;
+                color: $light-blue;
+            }
+            
+            &_title_bot {
+                color: #FF5656;
+            }
+        }
+    }
+}
+
+.around_the_world {
+    display: flex;
+    min-height: 720px;
+    padding: 46px 0;
+    background:url('../assets/img/bg/world_bg.jpg') center center/cover no-repeat;
+
+    .container {
+        position: relative;
+    }
+    &_label {
+        @include black-bg-label;
+        background:white;
+        color:#070716;
+        width: 75px;
+        height: 25px;
+    }
+    &_title {
+    @include white-bg-title;
+    color:white;
+
+    
+    }
+    &_sub_title {
+        @include white-sub-title;
+        color:white;
+        padding-top: 6px;
+    }
+
+    &_look_at_cities {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        // margin: 0 auto;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #1FBAD6;
+    }
+}
+
+footer {
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content_wrapper {
+        min-height: 135px;
+        background-color:#000000;
+    }
+}
+
+
