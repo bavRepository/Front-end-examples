@@ -584,25 +584,25 @@ footer {
         align-items:flex-start;
 
         div {
+            display: flex;
+            width: 33.33%;
             
-            flex: 1 1 33.33%;
-            // width: 33.33%;
-            
-            &:nth-child(2) {
-                display: flex;
-                justify-content: center;
+            &:nth-child(1) {
+                justify-content: flex-start;
+            }
 
+            &:nth-child(2) {
+                justify-content: center;
             }
 
             &:nth-child(3) {
-                display: flex;
                 justify-content: flex-end;
-
             }
         }
 
         &_social {
             display: flex;
+            flex: 0 1;
             gap:5px;
             
             &_item {
