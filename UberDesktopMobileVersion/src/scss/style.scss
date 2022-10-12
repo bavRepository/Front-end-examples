@@ -554,25 +554,61 @@ header {
         position: absolute;
         bottom:0;
         width: 100%;
-        // margin: 0 auto;
         font-weight: 400;
         font-size: 15px;
         text-align: center;
         text-transform: uppercase;
-        color: #1FBAD6;
+        
+        a {
+            text-decoration: none;
+            color: #1FBAD6;
+        }
     }
 }
 
 footer {
     min-height: 155px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 14px 25px 0 20px;
 
-    .content_wrapper {
-        min-height: 135px;
-        background-color:#000000;
+    .footer_divider {
+        width: 299px;
+        height: 4px;
+        background:#1FBAD6;
+        margin: 0 auto;
     }
+            
+    .footer_wrapper {
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+
+        div {
+            
+            flex: 1 1 33.33%;
+            
+            &:nth-child(3) {
+                display: flex;
+                justify-content: flex-end;
+
+            }
+        }
+
+        &_social {
+            display: flex;
+            gap:5px;
+            
+            &_item {
+                text-decoration: none;
+    
+                .icon-facebook:before {
+                    content: "\e900";
+                    color:black;
+                    font-size: 35px;
+               }
+            }
+        }
+
+    }
+   
 }
-
-

@@ -684,23 +684,58 @@ header .subheader_content_make_call_wrapper_btn {
   font-size: 15px;
   text-align: center;
   text-transform: uppercase;
+}
+.around_the_world_look_at_cities a {
+  text-decoration: none;
   color: #1FBAD6;
 }
 
 footer {
   min-height: 155px;
+  padding: 14px 25px 0 20px;
+}
+footer .footer_divider {
+  width: 299px;
+  height: 4px;
+  background: #1FBAD6;
+  margin: 0 auto;
+}
+footer .footer_wrapper {
+  padding-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-footer .content_wrapper {
-  min-height: 135px;
-  background-color: #000000;
+footer .footer_wrapper div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.33%;
+          flex: 1 1 33.33%;
+}
+footer .footer_wrapper div:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+footer .footer_wrapper_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+footer .footer_wrapper_social_item {
+  text-decoration: none;
+}
+footer .footer_wrapper_social_item .icon-facebook:before {
+  content: "\e900";
+  color: black;
+  font-size: 35px;
 }
