@@ -750,3 +750,70 @@ footer .footer_wrapper_social_item .icon-facebook:before {
   color: black;
   font-size: 35px;
 }
+
+.testWrapper {
+  border: 4px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.testWrapper .item1 {
+  width: 20.33%;
+  height: 400px;
+  background: #070716;
+  border: 4px solid #1CA8C3;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+.testWrapper .item2 {
+  width: 400px;
+  height: 400px;
+  background: #070716;
+  border: 4px solid #1CA8C3;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.testWrapper .item3 {
+  width: 20.33%;
+  height: 400px;
+  background: #070716;
+  border: 4px solid #1CA8C3;
+}
+
+.item1 .menu {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.item1 .item {
+  color: #fff;
+  position: relative;
+}
+.item1 .item:before {
+  content: "";
+  display: block;
+  width: 10px;
+  cursor: pointer;
+  height: 2px;
+  position: absolute;
+  left: -14px;
+  background: #1CA8C3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.item1 .item:after {
+  content: "";
+  display: block;
+  width: 2px;
+  cursor: pointer;
+  height: 10px;
+  position: absolute;
+  left: -10px;
+  background: #1CA8C3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
