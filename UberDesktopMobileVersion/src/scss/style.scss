@@ -6,6 +6,11 @@
 $light-blue : #1CA8C3;
 $soft-dark: #222222;
 
+@mixin social_icons {
+    color: white;
+    font-size: 20px;
+}
+
 @mixin black-bg-label {
     margin: 0 auto;
     display: flex;
@@ -17,7 +22,7 @@ $soft-dark: #222222;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 @mixin white-bg-title {
@@ -72,18 +77,19 @@ header {
                 display: flex;
                 align-items: center;
                 border-right: 2px dotted #000000;
-                padding:10px 30px;
+                padding: 10px 30px;
 
                 &:last-child {
                     border-right: none;
-                 }
-            }
-                &_item_link {
-                    font-weight: 300;
-                    font-size: 15px;
-                    color: #FFFFFF;
-                    text-decoration: none;
                 }
+            }
+
+            &_item_link {
+                font-weight: 300;
+                font-size: 15px;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
         }
     }
 
@@ -100,7 +106,7 @@ header {
             flex-wrap: wrap;
             justify-content: center;
             padding: 21px;
-  
+
             &_logo_block {
                 display: flex;
                 flex-direction: column;
@@ -115,15 +121,15 @@ header {
                 }
 
                 &_wrapper {
-                width: 285px;
-                height: 32px;
+                    width: 285px;
+                    height: 32px;
 
-                img {
-                    display: block;
-                    max-width: 100%;
+                    img {
+                        display: block;
+                        max-width: 100%;
+                    }
+
                 }
-
-            }
             }
 
             &_call_us_block {
@@ -172,7 +178,7 @@ header {
 }
 
 .promo {
-    display:flex;
+    display: flex;
     background: url('../assets/img/bg/uber_bg.jpg') center (center / cover) no-repeat;
     min-height: 800px;
     padding: 155px 0 186px 0;
@@ -239,20 +245,20 @@ header {
     display: flex;
 
 
-        &_label {
-            @include black-bg-label;
-        }
+    &_label {
+        @include black-bg-label;
+    }
 
-        &_title {
-           @include white-bg-title;
-        }
+    &_title {
+        @include white-bg-title;
+    }
 
     &_items_wrapper {
         display: flex;
-        align-items:top;
+        align-items: top;
         flex-wrap: wrap;
-        
-        
+
+
         .reasons_item {
             display: flex;
             flex: 1 1 50%;
@@ -278,8 +284,8 @@ header {
                 font-size: 17px;
                 line-height: 21px;
                 color: #1EACC7;
-                 
-                    &:nth-child(odd) {
+
+                &:nth-child(odd) {
                     width: 340px;
                 }
 
@@ -323,22 +329,27 @@ header {
             height: 280px;
             flex: 0 1 auto;
             position: relative;
-            
+
             &_1 {
                 background: url('../assets/img/mobile_karts/1_one_touch.png') center center/cover no-repeat;
             }
+
             &_2 {
                 background: url('../assets/img/mobile_karts/2_good_serve.png') center center/cover no-repeat;
             }
+
             &_3 {
                 background: url('../assets/img/mobile_karts/3_clear_price.png') center center/cover no-repeat;
             }
+
             &_4 {
                 background: url('../assets/img/mobile_karts/4_сashless_payment.png') center center/cover no-repeat;
             }
+
             &_5 {
                 background: url('../assets/img/mobile_karts/5_callback.png') center center/cover no-repeat;
             }
+
             &_6 {
                 background: url('../assets/img/mobile_karts/6_divide_drive_payment.png') center center/cover no-repeat;
             }
@@ -354,16 +365,16 @@ header {
             &_plus {
                 width: 29px;
                 height: 29px;
-                background:#000000;
-                border-radius:100%;
+                background: #000000;
+                border-radius: 100%;
                 position: absolute;
                 bottom: 34px;
-                left:50%;
+                left: 50%;
                 transform: translateX(-50%);
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
-                align-items:center;
+                align-items: center;
 
                 &:before {
                     content: '';
@@ -387,11 +398,11 @@ header {
 .choose {
     min-height: 898px;
     display: flex;
-    
+
     &_top_side_container {
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         position: relative;
         min-height: 502px;
         background: #070716;
@@ -399,7 +410,7 @@ header {
 
         .choose_label {
             @include black-bg-label;
-            background:white;
+            background: white;
             color: #070716;
         }
 
@@ -416,7 +427,7 @@ header {
 
         .car_bg {
             position: absolute;
-            top:234px;
+            top: 234px;
         }
 
         img {
@@ -428,7 +439,7 @@ header {
     &_bot_side_container {
         padding-top: 210.5px;
         min-height: 397px;
-        background:url('../assets/img/bg/uber_car_bot_bg.png') center center/cover no-repeat;
+        background: url('../assets/img/bg/uber_car_bot_bg.png') center center/cover no-repeat;
 
         .choose_car_descr {
             margin: 0 auto;
@@ -467,14 +478,14 @@ header {
 
         .item {
             margin: 33px 0;
-  
+
             &_list {
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
                 margin-top: 18px;
                 padding-left: 50px;
-  
+
                 .li_content {
                     position: relative;
                     margin-bottom: 10px;
@@ -486,19 +497,20 @@ header {
                         content: '';
                         display: block;
                         position: absolute;
-                        left:-32px;
-                        top:50%;
+                        left: -32px;
+                        top: 50%;
                         transform: translateY(-50%);
                         width: 21px;
                         height: 20px;
-                        background:url('../assets/img/check_blue.png') center center/cover no-repeat;
+                        background: url('../assets/img/check_blue.png') center center/cover no-repeat;
                     }
 
                     &_bot:before {
-                        background:url('../assets/img/check_red.png') center center/cover no-repeat;
+                        background: url('../assets/img/check_red.png') center center/cover no-repeat;
                     }
                 }
             }
+
             .day_salary {
                 margin-top: 25px;
                 color: $light-blue;
@@ -514,7 +526,7 @@ header {
                 align-items: center;
                 color: $light-blue;
             }
-            
+
             &_title_bot {
                 color: #FF5656;
             }
@@ -526,39 +538,42 @@ header {
     display: flex;
     min-height: 720px;
     padding: 46px 0;
-    background:url('../assets/img/bg/world_bg.jpg') center center/cover no-repeat;
+    background: url('../assets/img/bg/world_bg.jpg') center center/cover no-repeat;
 
     .container {
         position: relative;
     }
+
     &_label {
         @include black-bg-label;
-        background:white;
-        color:#070716;
+        background: white;
+        color: #070716;
         width: 75px;
         height: 25px;
     }
-    &_title {
-    @include white-bg-title;
-    color:white;
 
-    
+    &_title {
+        @include white-bg-title;
+        color: white;
+
+
     }
+
     &_sub_title {
         @include white-sub-title;
-        color:white;
+        color: white;
         padding-top: 6px;
     }
 
     &_look_at_cities {
         position: absolute;
-        bottom:0;
+        bottom: 0;
         width: 100%;
         font-weight: 400;
         font-size: 15px;
         text-align: center;
         text-transform: uppercase;
-        
+
         a {
             text-decoration: none;
             color: #1FBAD6;
@@ -573,20 +588,20 @@ footer {
     .footer_divider {
         width: 299px;
         height: 4px;
-        background:#1FBAD6;
+        background: #1FBAD6;
         margin: 0 auto;
     }
-            
-    .footer_wrapper {
+
+    .footer_content_wrapper {
         padding-top: 32px;
         display: flex;
         justify-content: space-between;
-        align-items:flex-start;
+        align-items: flex-start;
 
         div {
             display: flex;
             width: 33.33%;
-            
+
             &:nth-child(1) {
                 justify-content: flex-start;
             }
@@ -601,90 +616,34 @@ footer {
         }
 
         &_social {
+
             display: flex;
             flex: 0 1;
-            gap:5px;
-            
+            gap: 5px;
+
             &_item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+                background: black;
                 text-decoration: none;
-    
-                .icon-facebook:before {
-                    content: "\e900";
-                    color:black;
-                    font-size: 35px;
-               }
+
+                .icon-facebook-f:before {
+                    @include social_icons;
+                }
+
+                .icon-twitter-1:before {
+                    @include social_icons;
+                }
+
             }
         }
 
     }
-   
-}
 
-.testWrapper {
-    border:4px solid blue;
-    display: flex;
-    
 
-    .item1 {
-        width: 20.33%;
-        height: 400px;
-        background:#070716;
-        border:4px solid #1CA8C3;
-        flex-grow: 0;
-
-    }.item2 {
-        width: 400px;
-        height: 400px;
-        background:#070716;
-        border:4px solid #1CA8C3;
-        flex-grow: 1;
-    }.item3 {
-        width: 20.33%;
-        height: 400px;
-        background:#070716;
-        border:4px solid #1CA8C3;
-    }
-}
-
-.item1 {
-
-    .menu {
-        margin: 0;
-        list-style-type: none;
-        padding-left: 20px;
-        
-    }
-    .item {
-        color:#fff;
-        position: relative;
-
-        &:before {
-            content: '';
-            display: block;
-            width: 10px;
-            cursor: pointer;
-            height: 2px;
-            position: absolute;
-            left: -14px;
-            background:#1CA8C3;
-            top:50%;
-            transform: translateY(-50%);
-
-        }
-
-        &:after {
-            content: '';
-            display: block;
-            width: 2px;
-            cursor: pointer;
-            height: 10px;
-            position: absolute;
-            left: -10px;
-            background:#1CA8C3;
-            top:50%;
-            transform: translateY(-50%);
-
-        }
-    }
 
 }
