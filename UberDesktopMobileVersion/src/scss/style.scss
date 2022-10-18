@@ -584,6 +584,7 @@ header {
 footer {
     min-height: 155px;
     padding: 14px 25px 0 20px;
+    
 
     .footer_divider {
         width: 299px;
@@ -596,16 +597,15 @@ footer {
         padding-top: 32px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: flex-start;
-        gap: 5px;
         
         div {
             display: flex;
             width: 33.33%;
-            flex: 1 0;
+            flex-shrink: 0;
             
-    
-
+           
             &:nth-child(1) {
                 justify-content: flex-start;
             }
@@ -620,10 +620,11 @@ footer {
         }
 
         &_social {
-
             gap: 5px;
-
+           display: flex;
+           flex: 0 1;
             &_item {
+                flex-shrink: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;

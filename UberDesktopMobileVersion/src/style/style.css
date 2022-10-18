@@ -708,19 +708,19 @@ footer .footer_content_wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 5px;
 }
 footer .footer_content_wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 33.33%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0;
-          flex: 1 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 footer .footer_content_wrapper div:nth-child(1) {
   -webkit-box-pack: start;
@@ -739,8 +739,16 @@ footer .footer_content_wrapper div:nth-child(3) {
 }
 footer .footer_content_wrapper_social {
   gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1;
+          flex: 0 1;
 }
 footer .footer_content_wrapper_social_item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
