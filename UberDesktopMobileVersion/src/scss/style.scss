@@ -595,13 +595,17 @@ footer {
     .footer_content_wrapper {
         padding-top: 32px;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap-reverse;
+        // justify-content: space-between;
+        // justify-content: center;
+        flex-wrap: wrap;
         gap: 5px;
               
         div {
-           
+            
+            // flex-basis: 33%;
             display: flex;
+            flex: 0 1 33%;
+
            
             &:nth-child(2) {
                 justify-content: center;
@@ -613,11 +617,14 @@ footer {
         }
 
         &_social {
-
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            // flex-shrink: 0;
             gap: 5px;
 
             &_item {
-                flex-shrink: 0;
+               
                 display: flex;
                 justify-content: center;
                 align-items: center;
