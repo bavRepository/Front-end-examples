@@ -559,7 +559,7 @@ header .subheader_content_make_call_wrapper_btn {
   color: #222222;
   margin-top: 27px;
 }
-.condition_require .cond_req_items_row {
+.condition_require .cond_req_block_row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,29 +568,29 @@ header .subheader_content_make_call_wrapper_btn {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.condition_require .cond_req_items_row .item_wrapper {
+.condition_require .cond_req_block_row .item_wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 46.5%;
           flex: 0 1 46.5%;
 }
-.condition_require .cond_req_items_row .item {
+.condition_require .cond_req_block_row .item {
   margin: 33px 0;
 }
-.condition_require .cond_req_items_row .item_list {
+.condition_require .cond_req_block_row .item_list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin-top: 18px;
   padding-left: 50px;
 }
-.condition_require .cond_req_items_row .item_list .li_content {
+.condition_require .cond_req_block_row .item_list_line {
   position: relative;
   margin-bottom: 10px;
   font-weight: 300;
   font-size: 17px;
   color: #222222;
 }
-.condition_require .cond_req_items_row .item_list .li_content:before {
+.condition_require .cond_req_block_row .item_list_line:before {
   content: "";
   display: block;
   position: absolute;
@@ -602,17 +602,17 @@ header .subheader_content_make_call_wrapper_btn {
   height: 20px;
   background: url("../assets/img/check_blue.png") center center/cover no-repeat;
 }
-.condition_require .cond_req_items_row .item_list .li_content_bot:before {
+.condition_require .cond_req_block_row .item_list_line_bot:before {
   background: url("../assets/img/check_red.png") center center/cover no-repeat;
 }
-.condition_require .cond_req_items_row .item .day_salary {
+.condition_require .cond_req_block_row .item .day_salary {
   margin-top: 25px;
   color: #1CA8C3;
 }
-.condition_require .cond_req_items_row .item_bot {
+.condition_require .cond_req_block_row .item_bot {
   margin-bottom: 0;
 }
-.condition_require .cond_req_items_row .item_title {
+.condition_require .cond_req_block_row .item_title {
   font-weight: 400;
   font-size: 22px;
   -webkit-box-align: center;
@@ -620,7 +620,7 @@ header .subheader_content_make_call_wrapper_btn {
           align-items: center;
   color: #1CA8C3;
 }
-.condition_require .cond_req_items_row .item_title_bot {
+.condition_require .cond_req_block_row .item_title_bot {
   color: #FF5656;
 }
 
@@ -711,12 +711,16 @@ footer .footer_content_wrapper {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 5px;
 }
 footer .footer_content_wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 33.33%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
 }
 footer .footer_content_wrapper div:nth-child(1) {
   -webkit-box-pack: start;
@@ -734,12 +738,6 @@ footer .footer_content_wrapper div:nth-child(3) {
           justify-content: flex-end;
 }
 footer .footer_content_wrapper_social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1;
-          flex: 0 1;
   gap: 5px;
 }
 footer .footer_content_wrapper_social_item {
@@ -763,6 +761,14 @@ footer .footer_content_wrapper_social_item .icon-facebook-f:before {
   font-size: 20px;
 }
 footer .footer_content_wrapper_social_item .icon-twitter-1:before {
+  color: white;
+  font-size: 20px;
+}
+footer .footer_content_wrapper_social_item .icon-linkedin-in:before {
+  color: white;
+  font-size: 20px;
+}
+footer .footer_content_wrapper_social_item .icon-instagram:before {
   color: white;
   font-size: 20px;
 }

@@ -80,10 +80,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-twitter-1:before {
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-linkedin-in:before {
   content: "\e900";
 }
-
-.icon-facebook-f:before {
+.icon-twitter-1:before {
   content: "\e901";
+}
+.icon-facebook-f:before {
+  content: "\e902";
 }
