@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 1140px;
   margin: 0 auto;
@@ -708,29 +712,41 @@ footer .footer_content_wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 5px;
 }
-footer .footer_content_wrapper div {
+footer .footer_content_wrapper_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
-footer .footer_content_wrapper div:nth-child(2) {
+footer .footer_content_wrapper_block:nth-child(1) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+footer .footer_content_wrapper_block:nth-child(2) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer_content_wrapper div:nth-child(3) {
+footer .footer_content_wrapper_block:nth-child(3) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-footer .footer_content_wrapper_social {
+footer .footer_content_wrapper_block .footer_social_block_wrapper {
   gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
-footer .footer_content_wrapper_social_item {
+footer .footer_content_wrapper_block .footer_social_block_wrapper_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -746,48 +762,63 @@ footer .footer_content_wrapper_social_item {
   background: black;
   text-decoration: none;
 }
-footer .footer_content_wrapper_social_item .icon-facebook-f:before {
+footer .footer_content_wrapper_block .footer_social_block_wrapper_item span:before {
   color: white;
   font-size: 20px;
 }
-footer .footer_content_wrapper_social_item .icon-twitter-1:before {
-  color: white;
-  font-size: 20px;
-}
-footer .footer_content_wrapper_social_item .icon-linkedin-in:before {
-  color: white;
-  font-size: 20px;
-}
-footer .footer_content_wrapper_social_item .icon-instagram:before {
-  color: white;
-  font-size: 20px;
-}
-
-.test {
+footer .footer_content_wrapper_block .footer_about_us_block_wrapper {
+  min-height: 68px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 4px solid yellowgreen;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer_content_wrapper_block .footer_about_us_block_wrapper_title_links {
+  width: 365px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.test2 {
+footer .footer_content_wrapper_block .footer_about_us_block_wrapper_title_links a {
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #070716;
+}
+footer .footer_content_wrapper_block .footer_about_us_block_wrapper_contact_links {
+  width: 390px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border: 4px dashed blue;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.wid {
-  width: 200px;
-  height: 200px;
-  background: tomato;
-  border: 4px solid black;
+footer .footer_content_wrapper_block .footer_about_us_block_wrapper_contact_links a {
+  font-weight: 300;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999999;
 }
