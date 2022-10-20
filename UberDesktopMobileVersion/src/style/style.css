@@ -759,7 +759,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,15 +769,15 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links {
           justify-content: space-between;
   gap: 8px;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links a {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block a {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-weight: 300;
   font-size: 15px;
   text-transform: uppercase;
   color: #070716;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block {
   gap: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,19 +786,19 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links a {
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block a {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-weight: 300;
   font-size: 11px;
   text-transform: uppercase;
   color: #999999;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block:last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child a {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block:last-child a {
   color: #1CA8C3;
 }

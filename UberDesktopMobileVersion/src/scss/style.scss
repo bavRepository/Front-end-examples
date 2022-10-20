@@ -632,15 +632,14 @@ footer {
             flex-direction: column;
             justify-content: space-between;
 
-            &_title_links {
-
+            &_title_links_block {
                 display: flex;
                 padding: 0 10px;
                 justify-content: space-between;
                 gap: 8px;
 
                 a {
-                    flex-shrink: 1;
+                    flex-shrink: 0;
                     font-weight: 300;
                     font-size: 15px;
                     text-transform: uppercase;
@@ -649,13 +648,13 @@ footer {
 
             }
 
-            &_contact_links {
+            &_contact_links_block {
                 gap: 8px;
                 display: flex;
                 justify-content: space-between;
 
                 a {
-                    flex-shrink: 1;
+                    flex-shrink: 0;
                     font-weight: 300;
                     font-size: 11px;
                     text-transform: uppercase;
