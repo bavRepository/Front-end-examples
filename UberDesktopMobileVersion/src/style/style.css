@@ -839,10 +839,8 @@ footer .footer_content_wrapper .footer_stores_wrapper_item_1 {
   background: url("../assets/icons/Stores/app_store.svg") center center/cover no-repeat;
 }
 footer .footer_content_wrapper .footer_stores_wrapper_item_2 {
-  background-size: 100% 106%;
-  background-position: center center;
-  background-image: url("../assets/icons/Stores/google_play.png");
-  background-repeat: no-repeat;
+  background: url("../assets/icons/Stores/google_play.png") center center no-repeat;
+  background-size: 100% 105%;
 }
 footer .footer_content_wrapper .footer_stores_wrapper_item_3 {
   background: url("../assets/icons/Stores/windows_store.png") center center/cover no-repeat;

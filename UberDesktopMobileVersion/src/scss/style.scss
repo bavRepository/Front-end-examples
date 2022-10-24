@@ -604,7 +604,7 @@ footer {
         flex-wrap: wrap;
         gap: 5px;
 
-        & > div {
+        &>div {
             display: flex;
             flex-grow: 1;
             flex-basis: 33%;
@@ -621,8 +621,8 @@ footer {
         .footer_social_block_wrapper {
             gap: 5px;
             display: flex;
-                         
-            
+
+
             &_item {
                 display: flex;
                 justify-content: center;
@@ -653,21 +653,22 @@ footer {
                 justify-content: space-between;
                 gap: 8px;
 
-                    a {
-                        flex-shrink: 0;
-                        font-weight: 300;
-                        font-size: 15px;
-                        text-transform: uppercase;
-                        color: #070716;
-                     }
-                
+                a {
+                    flex-shrink: 0;
+                    font-weight: 300;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    color: #070716;
+                }
+
             }
+
             &_contact_links {
                 flex-wrap: wrap;
                 gap: 8px;
                 display: flex;
                 justify-content: space-between;
-                
+
                 a {
                     flex-shrink: 0;
                     font-weight: 300;
@@ -678,8 +679,9 @@ footer {
 
                 &:last-child {
                     justify-content: center;
+
                     a {
-                    color: $light-blue;
+                        color: $light-blue;
                     }
                 }
             }
@@ -693,21 +695,18 @@ footer {
             &_item {
                 height: 30px;
                 width: 100px;
-                
+
                 &_1 {
-                    background:url('../assets/icons/Stores/app_store.svg') center center/cover no-repeat;
+                    background: url('../assets/icons/Stores/app_store.svg') center center/cover no-repeat;
                 }
 
                 &_2 {
-                //    background:url('../assets/icons/Stores/google_play.png') center center/cover no-repeat;
-                   background-size: 100% 106%;
-                   background-position: center center;
-                   background-image: url('../assets/icons/Stores/google_play.png');
-                   background-repeat: no-repeat;
-                    }
+                    background: url('../assets/icons/Stores/google_play.png') center center no-repeat;
+                    background-size: 100% 105%;
+                }
 
                 &_3 {
-                    background:url('../assets/icons/Stores/windows_store.png') center center/cover no-repeat;
+                    background: url('../assets/icons/Stores/windows_store.png') center center/cover no-repeat;
                 }
 
                 a {
@@ -718,4 +717,3 @@ footer {
         }
     }
 }
-
