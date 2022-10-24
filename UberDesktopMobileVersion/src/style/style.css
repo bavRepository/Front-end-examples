@@ -712,12 +712,29 @@ footer .footer_content_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 5px;
+}
+footer .footer_content_wrapper > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+footer .footer_content_wrapper > div:nth-child(2) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .footer_content_wrapper > div:nth-child(3) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 footer .footer_content_wrapper .footer_social_block_wrapper {
   gap: 5px;
@@ -746,7 +763,8 @@ footer .footer_content_wrapper .footer_social_block_wrapper_item span:before {
   font-size: 16px;
 }
 footer .footer_content_wrapper .footer_about_us_block_wrapper {
-  width: 390px;
+  -ms-flex-preferred-size: 390px;
+      flex-basis: 390px;
   min-height: 68px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -759,7 +777,9 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,7 +789,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block 
           justify-content: space-between;
   gap: 8px;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block a {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-weight: 300;
@@ -777,7 +797,9 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links_block 
   text-transform: uppercase;
   color: #070716;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,7 +808,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_bloc
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block a {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-weight: 300;
@@ -794,11 +816,38 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_bloc
   text-transform: uppercase;
   color: #999999;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block:last-child {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links_block:last-child a {
+footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child a {
   color: #1CA8C3;
+}
+footer .footer_content_wrapper .footer_stores_wrapper {
+  gap: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+}
+footer .footer_content_wrapper .footer_stores_wrapper_item {
+  height: 30px;
+  width: 100px;
+}
+footer .footer_content_wrapper .footer_stores_wrapper_item_1 {
+  background: url("../assets/icons/Stores/app_store.svg") center center/cover no-repeat;
+}
+footer .footer_content_wrapper .footer_stores_wrapper_item_2 {
+  background-size: 100% 106%;
+  background-position: center center;
+  background-image: url("../assets/icons/Stores/google_play.png");
+  background-repeat: no-repeat;
+}
+footer .footer_content_wrapper .footer_stores_wrapper_item_3 {
+  background: url("../assets/icons/Stores/windows_store.png") center center/cover no-repeat;
+}
+footer .footer_content_wrapper .footer_stores_wrapper_item a {
+  display: block;
+  height: 100%;
 }

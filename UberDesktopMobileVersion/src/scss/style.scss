@@ -601,14 +601,28 @@ footer {
     .footer_content_wrapper {
         padding: 32px 25px 0 20px;
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
         gap: 5px;
+
+        & > div {
+            display: flex;
+            flex-grow: 1;
+            flex-basis: 33%;
+
+            &:nth-child(2) {
+                justify-content: center;
+            }
+
+            &:nth-child(3) {
+                justify-content: flex-end;
+            }
+        }
 
         .footer_social_block_wrapper {
             gap: 5px;
             display: flex;
-
+                         
+            
             &_item {
                 display: flex;
                 justify-content: center;
@@ -626,33 +640,34 @@ footer {
         }
 
         .footer_about_us_block_wrapper {
-            width: 390px;
+            flex-basis: 390px;
             min-height: 68px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            &_title_links_block {
+            &_title_links {
+                flex-wrap: wrap;
                 display: flex;
                 padding: 0 10px;
                 justify-content: space-between;
                 gap: 8px;
 
-                a {
-                    flex-shrink: 0;
-                    font-weight: 300;
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    color: #070716;
-                }
-
+                    a {
+                        flex-shrink: 0;
+                        font-weight: 300;
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        color: #070716;
+                     }
+                
             }
-
-            &_contact_links_block {
+            &_contact_links {
+                flex-wrap: wrap;
                 gap: 8px;
                 display: flex;
                 justify-content: space-between;
-
+                
                 a {
                     flex-shrink: 0;
                     font-weight: 300;
@@ -663,12 +678,44 @@ footer {
 
                 &:last-child {
                     justify-content: center;
-
                     a {
-                        color: $light-blue;
+                    color: $light-blue;
                     }
+                }
+            }
+        }
+
+        .footer_stores_wrapper {
+            gap: 6px;
+            display: flex;
+            width: 320px;
+
+            &_item {
+                height: 30px;
+                width: 100px;
+                
+                &_1 {
+                    background:url('../assets/icons/Stores/app_store.svg') center center/cover no-repeat;
+                }
+
+                &_2 {
+                //    background:url('../assets/icons/Stores/google_play.png') center center/cover no-repeat;
+                   background-size: 100% 106%;
+                   background-position: center center;
+                   background-image: url('../assets/icons/Stores/google_play.png');
+                   background-repeat: no-repeat;
+                    }
+
+                &_3 {
+                    background:url('../assets/icons/Stores/windows_store.png') center center/cover no-repeat;
+                }
+
+                a {
+                    display: block;
+                    height: 100%;
                 }
             }
         }
     }
 }
+
