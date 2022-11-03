@@ -1,3 +1,22 @@
+
+@mixin tr025 {
+    transition: all 0.25s;
+} 
+
+@mixin tr05 {
+    transition: all .5s;
+}
+
+@mixin blue-button{
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    text-transform: uppercase;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+}
+
 @mixin social_icons {
     color: white;
     font-size: 16px;
