@@ -62,16 +62,16 @@ header nav .menu_item {
 }
 header nav .menu_item:first-child {
   border-left: none;
+  padding-left: 0px;
 }
 header nav .menu_item:last-child {
   border-right: none;
+  padding-right: 0px;
 }
 header nav .menu_link {
   font-weight: 300;
   font-size: 15px;
   color: #FFFFFF;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
 }
 header nav .menu_link:hover {
   color: #48D1CC;
@@ -723,21 +723,27 @@ header .subheader_content_request_call_wrapper_btn:hover {
   text-transform: uppercase;
 }
 .around_the_world_look_at_cities a {
-  text-decoration: none;
+  display: inline-block;
   color: #1FBAD6;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.around_the_world_look_at_cities a:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 footer {
   min-height: 155px;
   padding-top: 14px;
 }
-footer .footer_divider {
+footer .divider {
   width: 299px;
   height: 4px;
   background: #1FBAD6;
   margin: 0 auto;
 }
-footer .footer_content_wrapper {
+footer .content_wrapper {
   padding: 32px 25px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -746,7 +752,7 @@ footer .footer_content_wrapper {
       flex-wrap: wrap;
   gap: 5px;
 }
-footer .footer_content_wrapper > div {
+footer .content_wrapper > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,23 +762,25 @@ footer .footer_content_wrapper > div {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
 }
-footer .footer_content_wrapper > div:nth-child(2) {
+footer .content_wrapper > div:nth-child(2) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer_content_wrapper > div:nth-child(3) {
+footer .content_wrapper > div:nth-child(3) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-footer .footer_content_wrapper .footer_social_block_wrapper {
+footer .content_wrapper .social_block {
   gap: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-footer .footer_content_wrapper .footer_social_block_wrapper_item {
+footer .content_wrapper .social_block_item {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,11 +796,15 @@ footer .footer_content_wrapper .footer_social_block_wrapper_item {
   background: black;
   text-decoration: none;
 }
-footer .footer_content_wrapper .footer_social_block_wrapper_item span:before {
+footer .content_wrapper .social_block_item span:before {
   color: white;
   font-size: 16px;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper {
+footer .content_wrapper .social_block_item:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+footer .content_wrapper .about_us_block {
   -ms-flex-preferred-size: 390px;
       flex-basis: 390px;
   min-height: 68px;
@@ -807,7 +819,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links {
+footer .content_wrapper .about_us_block_title_links {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -819,7 +831,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links {
           justify-content: space-between;
   gap: 8px;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links a {
+footer .content_wrapper .about_us_block_title_links a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-weight: 300;
@@ -827,7 +839,10 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_title_links a {
   text-transform: uppercase;
   color: #070716;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links {
+footer .content_wrapper .about_us_block_title_links a:hover {
+  font-weight: 400;
+}
+footer .content_wrapper .about_us_block_contact_links {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 8px;
@@ -838,7 +853,7 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links a {
+footer .content_wrapper .about_us_block_contact_links a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-weight: 300;
@@ -846,38 +861,50 @@ footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links a {
   text-transform: uppercase;
   color: #999999;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child {
+footer .content_wrapper .about_us_block_contact_links a:hover {
+  font-weight: 400;
+}
+footer .content_wrapper .about_us_block_contact_links:last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer_content_wrapper .footer_about_us_block_wrapper_contact_links:last-child a {
+footer .content_wrapper .about_us_block_contact_links:last-child a {
   color: #1CA8C3;
 }
-footer .footer_content_wrapper .footer_stores_wrapper {
+footer .content_wrapper .about_us_block_contact_links:last-child a:hover {
+  font-weight: 400;
+}
+footer .content_wrapper .stores_block {
   gap: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 320px;
 }
-footer .footer_content_wrapper .footer_stores_wrapper_item {
+footer .content_wrapper .stores_block_item {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   height: 30px;
   width: 100px;
 }
-footer .footer_content_wrapper .footer_stores_wrapper_item_1 {
+footer .content_wrapper .stores_block_item_1 {
   background: url("../assets/icons/Stores/app_store.svg") center center/cover no-repeat;
 }
-footer .footer_content_wrapper .footer_stores_wrapper_item_2 {
+footer .content_wrapper .stores_block_item_2 {
   background: url("../assets/icons/Stores/google_play.png") center center no-repeat;
   background-size: 100% 105%;
 }
-footer .footer_content_wrapper .footer_stores_wrapper_item_3 {
+footer .content_wrapper .stores_block_item_3 {
   background: url("../assets/icons/Stores/windows_store.png") center center/cover no-repeat;
 }
-footer .footer_content_wrapper .footer_stores_wrapper_item a {
+footer .content_wrapper .stores_block_item a {
   display: block;
   height: 100%;
+}
+footer .content_wrapper .stores_block_item:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 @media (max-width: 1200px) {
