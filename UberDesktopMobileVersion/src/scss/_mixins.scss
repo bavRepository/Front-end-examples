@@ -3,6 +3,10 @@
     transition: all 0.25s;
 } 
 
+@mixin tr01 {
+    transition: all 0.1s;
+} 
+
 @mixin tr05 {
     transition: all .5s;
 }
@@ -30,6 +34,7 @@
     background: #000000;
     font-weight: 400;
     font-size: 11px;
+    line-height: 11px;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;

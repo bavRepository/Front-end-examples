@@ -31,11 +31,9 @@ header {
                 padding: 0 30px;
                 &:first-child {
                     border-left: none;
-                    padding-left: 0px;
                 }
                 &:last-child {
                     border-right: none;
-                    padding-right: 0px;
                 }
             }
             &_link {
@@ -51,35 +49,40 @@ header {
     .subheader {
         position: absolute;
         display: flex;
+        justify-content: center;
+        align-items:center;
         top: 50px;
         width: 100%;
-        min-height: 87px;
+        height: 87px;
         background-color: rgba(0, 0, 0, 0.6);
         &_content {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 21px;
+            padding: 0px 21px 0px 21px;
 
             &_logo_block {
                 display: flex;
                 flex-direction: column;
                 flex: 0 1 50%;
-                padding-right: 20px;
 
                 &_official {
+                    margin-top: 4px;
                     font-weight: 100;
                     font-size: 13px;
                     opacity: 0.5;
                     color: #FFFFFF;
                 }
                 &_wrapper {
-                    width: 285px;
-                    height: 32px;
-                    img {
+                    a {
                         display: block;
+                        width: 285px;
+                        height: 32px;
+                    } 
+                    img {
                         max-width: 100%;
                     }
+                                       
                 }
             }
             &_call_us_block {
@@ -197,17 +200,15 @@ header {
 
     &_items_wrapper {
         display: flex;
-        align-items: top;
         flex-wrap: wrap;
         .reasons_item {
             display: flex;
             flex: 1 1 50%;
             justify-content: center;
-            align-items: top;
+            align-items:center;
             margin-top: 35px;
 
             .icon_wrapper {
-                align-self: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -218,7 +219,7 @@ header {
                 margin-right: 26px;
             }
             .descr_block_title_wrapper {
-                width: 371px;
+                width: 300px;
                 font-weight: 400;
                 font-size: 17px;
                 line-height: 21px;
@@ -288,7 +289,7 @@ header {
             &_plus {
                 width: 29px;
                 height: 29px;
-                background: #000000;
+                background: black;
                 border-radius: 100%;
                 position: absolute;
                 bottom: 34px;
@@ -299,18 +300,26 @@ header {
                 justify-content: center;
                 align-items: center;
 
+                &:hover {
+                    background: $plus;
+                    transform: $scale-1-1 translateX(-50%);
+                }
                 &:before {
                     content: '';
                     width: 14px;
                     height: 2px;
-                    background: #1EACC7;
+                    background: $plus;
                 }
                 &:after {
                     content: '';
                     position: absolute;
                     width: 2px;
                     height: 14px;
-                    background: #1EACC7;
+                    background: $plus;
+                }
+                &:hover:after, &:hover:before {
+                    transform: $scale-1-1;
+                    background: black;
                 }
             }
         }

@@ -1,11 +1,75 @@
 @media (max-width: 1200px) {
     header {
         nav {
-          .menu {
+            .menu {
                 &_link {
                     font-size: 14px;
                 }
             }
-        } 
-   }
+        }
+    }
+
+
+
+  
+
+
+    .promo {
+        &_title {
+            font-size: 50px;
+        }
+    }
+
+    .reasons {
+
+        &_items_wrapper {
+            .reasons_item {
+                align-items: flex-start;
+
+                .descr_block_wrapper {
+                    width: 300px;
+                }
+            }
+        }
+    }
 }
+
+@media (max-width: 991px) {
+
+    header {
+        nav {
+            .menu {
+                &_item {
+                    padding: 0 18px;
+                }
+
+                &_link {
+                    font-size: 12px;
+                }
+            }
+        }
+        .subheader {
+           &_content {
+                &_logo_block {
+                    &_official {
+                        font-size: 11px;
+                   }
+                }
+                &_call_us_block {
+                    &_phone {
+                        font-size: 18px;
+                    }
+                }
+                &_request_call_wrapper {
+                    width: 100%;
+                    &_btn {
+                        
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}    
