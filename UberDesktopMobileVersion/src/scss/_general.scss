@@ -205,7 +205,7 @@ header {
             display: flex;
             flex: 1 1 50%;
             justify-content: center;
-            align-items:center;
+            align-items:flex-start;
             margin-top: 35px;
 
             .icon_wrapper {
@@ -218,17 +218,22 @@ header {
                 border-radius: 100%;
                 margin-right: 26px;
             }
+
             .descr_block_title_wrapper {
-                width: 300px;
+                width: 370px;
                 font-weight: 400;
                 font-size: 17px;
                 line-height: 21px;
                 color: #1EACC7;
-                &:nth-child(odd) {
+                &:nth-child(2n) {
                     width: 340px;
                 }
+                &:nth-child(odd) {
+                    width: 370px;
+                }
+
                 .descr_text_wrapper {
-                    font-weight: 400px;
+                    font-weight: 400;
                     font-size: 15px;
                     line-height: 21px;
                     color: #000000;

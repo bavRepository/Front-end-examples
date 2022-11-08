@@ -318,9 +318,9 @@ header .subheader_content_request_call_wrapper_btn:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 35px;
 }
 .reasons_items_wrapper .reasons_item .icon_wrapper {
@@ -340,17 +340,20 @@ header .subheader_content_request_call_wrapper_btn:hover {
   margin-right: 26px;
 }
 .reasons_items_wrapper .reasons_item .descr_block_title_wrapper {
-  width: 300px;
+  width: 370px;
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
   color: #1EACC7;
 }
-.reasons_items_wrapper .reasons_item .descr_block_title_wrapper:nth-child(odd) {
+.reasons_items_wrapper .reasons_item .descr_block_title_wrapper:nth-child(2n) {
   width: 340px;
 }
+.reasons_items_wrapper .reasons_item .descr_block_title_wrapper:nth-child(odd) {
+  width: 370px;
+}
 .reasons_items_wrapper .reasons_item .descr_block_title_wrapper .descr_text_wrapper {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 15px;
   line-height: 21px;
   color: #000000;
@@ -933,7 +936,7 @@ footer .content_wrapper .stores_block_item:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .reasons_items_wrapper .reasons_item .descr_block_wrapper {
+  .reasons_items_wrapper .reasons_item .descr_block_title_wrapper {
     width: 300px;
   }
 }
@@ -955,5 +958,55 @@ footer .content_wrapper .stores_block_item:hover {
   }
   header .subheader_content_request_call_wrapper_btn {
     height: 40px;
+  }
+  .promo_title {
+    font-size: 40px;
+  }
+  .promo_subtitle {
+    font-size: 30px;
+  }
+  .promo_descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 26px;
+  }
+  .promo_descr_text_wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 86%;
+            flex: 0 1 86%;
+  }
+  .promo_btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .reasons_items_wrapper .reasons_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .reasons_items_wrapper .reasons_item .descr_block_title_wrapper {
+    margin-top: 20px;
+  }
+  .reasons_items_wrapper .reasons_item .descr_block_title_wrapper .descr_text_wrapper {
+    font-weight: 400px;
+    font-size: 15px;
+    line-height: 21px;
+    color: #000000;
   }
 }
