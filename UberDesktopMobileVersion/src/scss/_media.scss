@@ -124,8 +124,21 @@
 
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+ header {
 
-
-
+    nav {
+            .menu {
+                position: fixed;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:flex-end;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100vh;
+                padding: 20px 15px;
+            }
+        }
+    }
 }
