@@ -1017,16 +1017,30 @@ footer .content_wrapper .stores_block_item:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 0;
-    right: 0;
+    left: -100%;
     width: 50%;
     height: 100vh;
     padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  header nav .menu_item {
+    border: 0;
+    padding: 0;
+    margin: 10px 0;
+  }
+  header nav .menu_link {
+    font-size: 20px;
+  }
+  header nav .menu_active {
+    left: 0;
   }
 }
