@@ -1,14 +1,17 @@
+@mixin pd-0-20 {
+    padding: 0 20px 0 20px;
+} 
 
 @mixin tr025 {
-    transition: all 0.25s;
+    transition: 0.25s all;
 } 
 
 @mixin tr01 {
-    transition: all 0.1s;
+    transition: 0.1s all;
 } 
 
 @mixin tr05 {
-    transition: all .5s;
+    transition: .5s all;
 }
 
 @mixin blue-button{
@@ -47,6 +50,17 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 48px;
+    text-transform: uppercase;
+    color: $soft-dark;
+}
+
+@mixin white-bg-title-mob {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 700;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
     text-transform: uppercase;
     color: $soft-dark;
 }
